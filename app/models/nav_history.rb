@@ -1,0 +1,2 @@
+class NavHistory < ApplicationRecord
+end

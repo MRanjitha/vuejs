@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: navapp_development
+  username: postgres
+  password: learn@more95
+
+test:
+  <<: *default
+  database: navapp_test
+  username: postgres
+  password: learn@more95
+
+production:
+  <<: *default
+  database: navapp_production
+  username: navapp
+  password: <%= ENV['NAVAPP_DATABASE_PASSWORD'] %>
